@@ -6,6 +6,28 @@ Develop a simple stock trading web application that allows users to view, buy, a
 ## UI Preview
 ![App UI](src/assets/ui.png)
 
+## How to Run Project Locally
+
+### 1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd <your-project-folder>
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Start the development server
+```bash
+npm run dev
+```
+
+- Opens the app in your browser at [http://localhost:5174](http://localhost:5174/)
+- The app uses `localStorage` to persist wallet balance and transaction history across reloads
+
+
 ## Features
 
 1. **View Available Stocks**
