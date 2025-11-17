@@ -6,7 +6,7 @@ import Wallet from './components/Wallet'
 import TransactionHistory from './components/TransactionHistory'
 import TradeModal from './components/Trade'
 
-const STORAGE_KEY = 'stock_app_v1'
+const STORAGE_KEY = 'stock_app_v2'
 const DEFAULT_WALLET = 1000
 
 function loadState() {
@@ -98,6 +98,7 @@ function App() {
     <div className="App">
       <header>
         <h1>Simple Stock Trading</h1>
+        <p>Starting wallet: ${DEFAULT_WALLET}. Brokerage on sales: 1%.</p>
       </header>
       <main>
         <div className="left">
@@ -113,7 +114,7 @@ function App() {
         </aside>
       </main>
 
-      <TradeModal
+      <TradeModal className="trade-modal"
         visible={modal.visible}
         type={modal.type}
         stock={modal.stock}
@@ -124,10 +125,6 @@ function App() {
           else if (modal.type === 'sell') handleSell(modal.stock, qty)
         }}
       />
-
-      <footer>
-        <p>Starting wallet: ${DEFAULT_WALLET}. Brokerage on sales: 1%.</p>
-      </footer>
     </div>
   )
 }
